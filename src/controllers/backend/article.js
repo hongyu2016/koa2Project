@@ -11,9 +11,11 @@ class BackendArticle {
         }) */
  
         //返回json接口
-        ctx.body={
+        
+        /* ctx.body={
           data: data
-        }
+        } */
+        return ctx.success({ msg:'获取成功',data: data }); //统一响应格式
     }
 }
 

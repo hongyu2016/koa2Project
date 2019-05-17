@@ -8,8 +8,9 @@ const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
 const handlebars= require('handlebars') //使用handlebars模板
 
-const index = require('./routes/index')
-const users = require('./routes/users')
+/* const index = require('./routes/index')
+const users = require('./routes/users') */
+const response = require('./src/middlewares/response'); //统一响应处理，在路由前调用
 const { backendRouter, frontendRouter } = require('./src/index');
 
 // error handler
@@ -39,6 +40,7 @@ app.use(async (ctx, next) => {
 // routes
 /* app.use(index.routes(), index.allowedMethods())
 app.use(users.routes(), users.allowedMethods()) */
+app.use(response)
 app.use(backendRouter.routes(),backendRouter.allowedMethods())
 //app.use(frontendRouter.routes(),frontendRouter.allowedMethods())
 
