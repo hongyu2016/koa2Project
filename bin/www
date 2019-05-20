@@ -90,4 +90,5 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
+  console.log('你的服务运行在：http://localhost:'+addr.port)
 }
