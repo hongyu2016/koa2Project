@@ -19,5 +19,5 @@ class BackendArticle {
     }
 }
 
-//export default BackendArticle;
-module.exports=BackendArticle
+export default BackendArticle;
+//module.exports=BackendArticle

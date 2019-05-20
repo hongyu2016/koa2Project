@@ -2,8 +2,8 @@
  * 管理后台的路由
  */
 
-//import {BackendArticle} from '../controllers/backend.export'
-const {BackendArticle} = require('../controllers/backend.export')
+import {BackendArticle} from '../controllers/backend.export'
+//const {BackendArticle} = require('../controllers/backend.export')
 const router = require('koa-router')();
 router.prefix('/server'); //路由前缀
 
