@@ -40,6 +40,7 @@ app.use(async (ctx, next) => {
 // routes
 /* app.use(index.routes(), index.allowedMethods())
 app.use(users.routes(), users.allowedMethods()) */
+console.log(backendRouter.routes())
 app.use(response)
 app.use(backendRouter.routes(),backendRouter.allowedMethods())
 //app.use(frontendRouter.routes(),frontendRouter.allowedMethods())
